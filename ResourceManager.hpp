@@ -18,11 +18,11 @@ class ResourceManager
             return *this;
         }
 
-        ResourceManager(ResourceManager&& r) : resource(r.resource){
+        ResourceManager(ResourceManager&& r) noexcept : resource(r.resource){
             r.resource = nullptr;
         }
 
-        ResourceManager& operator=(ResourceManager&& r)
+        ResourceManager& operator=(ResourceManager&& r) noexcept
         {
             if (this != &r) {
                 delete resource;
