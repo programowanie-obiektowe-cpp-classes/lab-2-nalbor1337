@@ -37,7 +37,7 @@ class ResourceManager
             delete resource;
         }
 
-        double get()
+        double get() const
         {
             return resource->get();
         }
