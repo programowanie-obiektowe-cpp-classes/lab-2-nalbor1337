@@ -26,7 +26,7 @@ class ResourceManager
         {
             if (this != &r) {
                 delete resource;
-                resource = new Resource(*(r.resource));
+                resource = r.resource;
                 r.resource = nullptr;
             }
             return *this;
